@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow Team | Подача заявки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-layer">
+    <div class="bg-circle c1"></div>
+    <div class="bg-circle c2"></div>
+    <div class="bg-circle c3"></div>
+</div>
+<div class="grid-bg"></div>
+<div class="stars" id="stars"></div>
+
+<nav>
+    <div class="nav-links">
+        <a href="#home" class="nav-link">Главная</a>
+        <a href="#apply" class="nav-link">Заявка</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="logo-wrap">
+        <img class="logo-img"
+             src="data:image/jpeg;base64,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"
+             alt="Meow Team Logo" />
+        <div class="logo-ring"></div>
+    </div>
+
+    <div class="badge">
+        <span class="dot"></span>
+        Набор открыт
+    </div>
+
+    <h1 class="hero-title">
+        <span class="line1">MEOW</span>
+        <span class="line2">TEAM</span>
+    </h1>
+
+    <p class="hero-sub">Мы ищем сильных игроков в нашу команду</p>
+
+    <a href="#apply" class="hero-btn">Подать заявку</a>
+
+    <div class="scroll-hint">
+        Скролл
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="apply">
+    <div class="form-header">
+        <h2>Заявка в <span>команду</span></h2>
+        <p>Заполни все поля — мы рассмотрим твою кандидатуру</p>
+    </div>
+
+    <div class="form-card">
+        <div class="form-steps" id="stepsBar">
+            <div class="step-dot active" id="s1"></div>
+            <div class="step-dot" id="s2"></div>
+            <div class="step-dot" id="s3"></div>
+            <div class="step-dot" id="s4"></div>
+            <div class="step-dot" id="s5"></div>
+            <div class="step-dot" id="s6"></div>
+            <div class="step-dot" id="s7"></div>
+        </div>
+
+        <div id="formContent">
+            <!-- Имя -->
+            <div class="field-group">
+                <label>Ваше имя <span class="req">*</span></label>
+                <input type="text" id="name" placeholder="Например: Shadow, CatKiller..." />
+                <div class="error-msg" id="nameErr">Пожалуйста, введи своё имя</div>
+            </div>
+
+            <!-- Возраст -->
+            <div class="field-group">
+                <label>Ваш возраст <span class="req">*</span> <span style="font-size:10px;color:var(--muted)">(принимаем с 12 лет)</span></label>
+                <input type="number" id="age" placeholder="Сколько тебе лет?" min="1" max="99" />
+                <div class="error-msg" id="ageErr">Минимальный возраст для подачи — 12 лет</div>
+            </div>
+
+            <!-- Чит -->
+            <div class="field-group">
+                <label>Есть ли у вас платный чит? <span class="req">*</span></label>
+                <div class="toggle-row">
+                    <button class="toggle-btn yes" onclick="selectToggle('cheat','yes',this)">✓ Да</button>
+                    <button class="toggle-btn no"  onclick="selectToggle('cheat','no',this)">✗ Нет</button>
+                </div>
+                <input type="hidden" id="cheat" />
+                <div class="error-msg" id="cheatErr">Выбери один из вариантов</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- PvE -->
+            <div class="field-group">
+                <label>Оцените себя в PvE <span class="req">*</span> <span style="font-size:10px;color:var(--muted)">(1–10)</span></label>
+                <div class="scale-row" id="pveScale"></div>
+                <input type="hidden" id="pve" />
+                <div class="error-msg" id="pveErr">Оцени свой уровень в PvE</div>
+            </div>
+
+            <!-- PvP -->
+            <div class="field-group">
+                <label>Оцените себя в PvP <span class="req">*</span> <span style="font-size:10px;color:var(--muted)">(1–10)</span></label>
+                <div class="scale-row" id="pvpScale"></div>
+                <input type="hidden" id="pvp" />
+                <div class="error-msg" id="pvpErr">Оцени свой уровень в PvP</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Часы -->
+            <div class="field-group">
+                <label>Часов в день готов играть <span class="req">*</span></label>
+                <input type="number" id="hours" placeholder="Например: 3" min="1" max="24" />
+                <div class="error-msg" id="hoursErr">Укажи количество часов (от 1 до 24)</div>
+            </div>
+
+            <!-- Discord -->
+            <div class="field-group">
+                <label>Ваш Discord <span class="req">*</span></label>
+                <input type="text" id="discord" placeholder="username или user#0000" />
+                <div class="error-msg" id="discordErr">Укажи свой Discord</div>
+            </div>
+
+            <button class="btn-submit" id="submitBtn" onclick="submitForm()">
+                Отправить заявку
+                <div class="loader" id="loader"></div>
+            </button>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="success-screen" id="successScreen">
+            <div class="success-icon">🐾</div>
+            <div class="success-title">НА РАССМОТРЕНИИ</div>
+            <p class="success-sub">
+                Твоя заявка успешно отправлена.<br>
+                Мы рассмотрим её и свяжемся с тобой в Discord.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <span>Meow Team</span> &nbsp;—&nbsp; 2025. Все права защищены.
+</footer>
+
+<script>
+    // Stars
+    const starsEl = document.getElementById('stars');
+    for (let i = 0; i < 80; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        s.style.left = Math.random() * 100 + '%';
+        s.style.top  = Math.random() * 100 + '%';
+        s.style.setProperty('--dur',   (2 + Math.random() * 4) + 's');
+        s.style.setProperty('--delay', (Math.random() * 5) + 's');
+        starsEl.appendChild(s);
+    }
+
+    // Build scale buttons
+    function buildScale(cId, hId, eId) {
+        const c = document.getElementById(cId);
+        for (let i = 1; i <= 10; i++) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'scale-btn';
+            btn.textContent = i;
+            btn.onclick = function () {
+                c.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                document.getElementById(hId).value = i;
+                document.getElementById(eId).classList.remove('show');
+                document.getElementById(hId).classList.remove('error');
+                updateSteps();
+            };
+            c.appendChild(btn);
+        }
+    }
+
+    buildScale('pveScale', 'pve', 'pveErr');
+    buildScale('pvpScale', 'pvp', 'pvpErr');
+
+    function selectToggle(id, val, btn) {
+        btn.closest('.toggle-row').querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        document.getElementById(id).value = val === 'yes' ? 'Да' : 'Нет';
+        document.getElementById(id + 'Err').classList.remove('show');
+        updateSteps();
+    }
+
+    const watchFields = ['name','age','hours','discord'];
+    watchFields.forEach(id => document.getElementById(id).addEventListener('input', updateSteps));
+
+    function updateSteps() {
+        const fields = ['name','age','cheat','pve','pvp','hours','discord'];
+        const dots = document.querySelectorAll('.step-dot');
+        fields.forEach((f, i) => {
+            const val = document.getElementById(f).value.trim();
+            dots[i].classList.toggle('done', !!val);
+            if (val) dots[i].classList.remove('active');
+        });
+    }
+
+    function showErr(fId, eId) {
+        const el = document.getElementById(fId);
+        if (el) el.classList.add('error');
+        document.getElementById(eId).classList.add('show');
+    }
+
+    function clearErr(fId, eId) {
+        const el = document.getElementById(fId);
+        if (el) el.classList.remove('error');
+        document.getElementById(eId).classList.remove('show');
+    }
+
+    function validateForm() {
+        let ok = true;
+
+        const name = document.getElementById('name').value.trim();
+        if (!name) { showErr('name','nameErr'); ok = false; } else { clearErr('name','nameErr'); }
+
+        const age = parseInt(document.getElementById('age').value);
+        if (!age || age < 12) { showErr('age','ageErr'); ok = false; } else { clearErr('age','ageErr'); }
+
+        if (!document.getElementById('cheat').value) {
+            document.getElementById('cheatErr').classList.add('show'); ok = false;
+        } else { document.getElementById('cheatErr').classList.remove('show'); }
+
+        if (!document.getElementById('pve').value) { showErr('pve','pveErr'); ok = false; } else { clearErr('pve','pveErr'); }
+        if (!document.getElementById('pvp').value) { showErr('pvp','pvpErr'); ok = false; } else { clearErr('pvp','pvpErr'); }
+
+        const hours = parseInt(document.getElementById('hours').value);
+        if (!hours || hours < 1 || hours > 24) { showErr('hours','hoursErr'); ok = false; } else { clearErr('hours','hoursErr'); }
+
+        const disc = document.getElementById('discord').value.trim();
+        if (!disc) { showErr('discord','discordErr'); ok = false; } else { clearErr('discord','discordErr'); }
+
+        return ok;
+    }
+
+    async function submitForm() {
+        if (!validateForm()) return;
+
+        const btn    = document.getElementById('submitBtn');
+        const loader = document.getElementById('loader');
+        btn.disabled = true;
+        loader.style.display = 'block';
+
+        const now = new Date();
+        const timeStr = now.toLocaleString('ru-RU', {
+            day:'2-digit', month:'2-digit', year:'numeric',
+            hour:'2-digit', minute:'2-digit', second:'2-digit'
+        });
+
+        const data = {
+            name:    document.getElementById('name').value.trim(),
+            age:     document.getElementById('age').value,
+            cheat:   document.getElementById('cheat').value,
+            pve:     document.getElementById('pve').value,
+            pvp:     document.getElementById('pvp').value,
+            hours:   document.getElementById('hours').value,
+            discord: document.getElementById('discord').value.trim()
+        };
+
+        const payload = {
+            username: "Meow Team | Заявки",
+            avatar_url: "https://i.imgur.com/AfFp7pu.png",
+            embeds: [{
+                title: "🐾 Новая заявка в Meow Team",
+                color: 0xa855f7,
+                fields: [
+                    { name: "👤 Имя",            value: data.name,          inline: true },
+                    { name: "🎂 Возраст",         value: data.age + " лет",  inline: true },
+                    { name: "🛡️ Платный чит",    value: data.cheat,         inline: true },
+                    { name: "⚔️ PvP",            value: data.pvp  + " / 10", inline: true },
+                    { name: "🏕️ PvE",            value: data.pve  + " / 10", inline: true },
+                    { name: "⏰ Часов в день",    value: data.hours + " ч.",  inline: true },
+                    { name: "💬 Discord",         value: data.discord,       inline: false }
+                ],
+                footer: { text: "Meow Team • " + timeStr },
+                thumbnail: { url: "https://i.imgur.com/AfFp7pu.png" }
+            }]
+        };
+
+        try {
+            const res = await fetch(
+                "https://discord.com/api/webhooks/1480291055357268003/DRuzEzj49ajNhs5S6ZVQVf38roebyI8T_lB_NzzGpoDF7r4R1EmgjQiRNWinhweuphVt",
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                }
+            );
+            console.log("Webhook status:", res.status);
+        } catch (e) {
+            console.error("Webhook error:", e);
+        }
+
+        loader.style.display = 'none';
+        document.getElementById('stepsBar').style.display = 'none';
+        document.getElementById('formContent').style.display = 'none';
+        const s = document.getElementById('successScreen');
+        s.style.display = 'flex';
+    }
+</script>
+</body>
+</html>
